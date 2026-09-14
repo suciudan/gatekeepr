@@ -1,5 +1,12 @@
 ![Gatekeepr — Open-source abuse prevention](.github/assets/gatekeepr-banner.png)
 
+<p align="center">
+  <a href="https://github.com/gtkppr/email-audit">Email Audit</a> ·
+  <a href="https://github.com/gtkppr/email-disposable">Disposable Domains</a> ·
+  <a href="https://github.com/gtkppr/disposable-email-infrastructure">Disposable Infrastructure</a> ·
+  <a href="https://github.com/gtkppr/laravel">Laravel</a>
+</p>
+
 Gatekeepr is an open-source abuse-prevention engine for signup, login, waitlist, and free-trial flows. Send an email address, with an optional IP address and user agent, and receive an `allow`, `challenge`, or `block` decision with the signals behind it.
 
 The entire monorepo is available: the API, data refresh jobs, website, administration and content tools, documentation, and integration packages. Originally built as a commercial service, it is now shared for anyone to study, use, adapt, and improve under the [MIT license](LICENSE).
