@@ -1,4 +1,4 @@
-# Gatekeepr
+![Gatekeepr — Open-source abuse prevention](.github/assets/gatekeepr-banner.png)
 
 Gatekeepr is an open-source abuse-prevention engine for signup, login, waitlist, and free-trial flows. Send an email address, with an optional IP address and user agent, and receive an `allow`, `challenge`, or `block` decision with the signals behind it.
 
