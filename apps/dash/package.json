@@ -47,7 +47,7 @@
     "@repo/core": "*",
     "@repo/db": "*",
     "better-sqlite3": "^12.9.0",
-    "cross-env": "^7.0.3",
+    "cross-env": "^10.1.0",
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
     "jsdom": "28.0.0",
