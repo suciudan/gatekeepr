@@ -1,0 +1,155 @@
+Write a product landing page for Gatekeepr using the brief below.
+
+COMPANY
+Gatekeepr is a developer-first API for protecting signup flows. It analyzes email, IP, and user agent at signup and returns a final status of allow, challenge, or block. It also returns threats, trust signals, blocklists, and info so teams can understand why the decision happened.
+
+PAGE NAME
+Email Intelligence
+
+PAGE ROLE
+This is the email-specific product page. It should explain how Gatekeepr helps teams detect disposable, risky, suspicious, and low-quality emails during signup. It should sit between generic email validation and broader signup protection.
+
+VISIBLE NAV LABEL
+Email Intelligence
+
+SUGGESTED URL
+/product/email-intelligence
+
+PAGE OWNERSHIP
+Own the topic of email-specific signup risk. Do not let this page become a generic deliverability or list-cleaning page. Do not let it become the main free-trial-abuse page either.
+
+PRIMARY KEYWORD
+disposable email detection
+
+SECONDARY KEYWORDS
+email intelligence
+email intelligence API
+fake email detection
+risky email detection
+temporary email detection
+role-based email detection
+suspicious email detection
+email fraud detection
+
+SUPPORTING PHRASES
+throwaway emails
+temporary email domains
+role accounts
+plus alias abuse
+MX checks
+domain checks
+suspicious local-part patterns
+fake signup emails
+real-time email screening
+email signals at signup
+
+SEARCH INTENT
+Commercial and developer evaluation. The reader wants to detect risky email addresses at signup and is comparing solutions.
+
+AUDIENCE
+Developers
+SaaS founders
+product teams
+teams trying to block disposable emails or low-quality signups
+
+CORE PROMISE
+Go beyond basic email validation and turn email into a real trust signal at signup.
+
+CORE MESSAGING ANGLE
+Most teams treat email as a formatting check. This page should explain that email is the earliest trust signal in signup and that Gatekeepr uses email intelligence to help decide whether a user should be trusted, challenged, or blocked.
+
+PRODUCT TRUTH TO ANCHOR TO
+- Gatekeepr checks disposable domains
+- It can detect role-based addresses
+- It flags suspicious plus-tag usage
+- It evaluates separator abuse and suspicious local-part composition
+- It provides context like known provider / related email signals
+- It returns a final status plus explainability fields
+- Do not talk about fraud scores or numeric scoring
+
+SUGGESTED SEO ELEMENTS
+H1: Disposable Email Detection & Email Intelligence
+Title tag: Disposable Email Detection API | Gatekeepr
+Meta description: Detect temporary, risky, and suspicious email addresses in real time. Gatekeepr helps you block fake signups and improve signup quality before account creation.
+
+HERO DIRECTION
+Possible headline angle: Detect risky emails before fake signups get in.
+Subheadline should make the contrast clear: syntax validation is not enough if the goal is to stop throwaway signups and bad accounts.
+Primary CTA: Start Free
+Secondary CTA: Explore Docs
+
+MUST-COVER SECTIONS
+1. Hero
+2. Why email is the earliest trust signal at signup
+3. Email validation vs email intelligence vs signup protection
+4. What Gatekeepr checks inside an email
+5. Examples of risky email patterns
+6. How email signals influence allow / challenge / block
+7. API example
+8. Use cases
+9. FAQs
+10. Final CTA
+
+SECTION NOTES
+- The “validation vs intelligence vs signup protection” section is important. Explain:
+  - email validation = syntax and basic domain checks
+  - email intelligence = suspicious patterns, disposable domains, risky email behavior
+  - signup protection = email plus IP and user agent together
+- “What Gatekeepr checks inside an email” should cover disposable domains, role accounts, suspicious tags, separator abuse, composition oddities, and domain/MX-related context.
+- “Examples of risky email patterns” should use concrete but simple examples like disposable inboxes, admin@ role accounts, high-randomness locals, or excessive separators.
+- “How email signals influence allow / challenge / block” should show that not every risky email must be blocked; some should be challenged.
+
+USE CASES TO INCLUDE
+- Blocking disposable email signups
+- Improving free-trial signup quality
+- Protecting waitlists and lead capture forms
+- Reducing fake users in self-serve onboarding
+- Filtering low-intent or suspicious accounts early
+
+PROOF / EXAMPLES TO WEAVE IN
+- Disposable email detection
+- Role-based address detection
+- Suspicious +tag usage
+- Separator abuse
+- Mixed or artificial local-part patterns
+- Known provider context
+- Real-time API response during registration
+
+FAQ QUESTIONS
+- What is the difference between email validation and email intelligence?
+- Do you detect disposable and role-based email addresses?
+- Can I use Gatekeepr before account creation?
+- What should I do when an email is marked challenge?
+
+INTERNAL LINKS TO MENTION
+Signup Protection
+Free-Trial Abuse Prevention
+How It Works
+Pricing
+API Docs
+
+CTA LANGUAGE
+Primary CTA: Start Free
+Secondary CTA: Explore Docs
+
+WRITING RULES
+- Tone: developer-first, clear, practical
+- Do not make this sound like a marketing email hygiene tool
+- Avoid bounce-rate, campaign hygiene, list cleaning, and outbound deliverability language
+- Focus on signup quality and abuse prevention
+- Use the primary keyword naturally in the H1, intro, at least one H2, and one FAQ
+- Keep the page specific and product-led
+- Make the page feel more useful than “email validation” and more focused than generic fraud detection
+
+OUTPUT FORMAT
+Write a polished landing page in clear web-copy format with:
+- headline
+- subheadline
+- CTA copy
+- section headings
+- body copy
+- one code/API section
+- four FAQs
+- final CTA
+
+Aim for roughly 900 to 1,300 words.

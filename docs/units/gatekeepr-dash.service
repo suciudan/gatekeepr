@@ -1,0 +1,12 @@
+[Unit]
+Description=Gatekeepr Dash
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/monorepo
+ExecStart=turbo start --filter dash
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

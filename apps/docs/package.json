@@ -1,0 +1,22 @@
+{
+  "name": "docs",
+  "scripts": {
+    "dev": "retype start",
+    "build": "retype build"
+  },
+  "private": true,
+  "description": "Gatekeepr Retype documentation site.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "apps/docs"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme",
+  "devDependencies": {
+    "retypeapp": "4.6.0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "api",
+  "packageManager": "yarn@4.9.2",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@repo/config": "*",
+    "@repo/core": "*",
+    "@repo/db": "*",
+    "dependency-graph": "^1.0.0",
+    "emoji-regex": "^10.4.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "moment": "^2.30.1",
+    "p-limit": "^6.2.0",
+    "rate-limit-redis": "^4.2.1",
+    "validator": "^13.15.15",
+    "whoiser": "2.0.0-beta.9"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.1.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "node debug.js",
+    "test": "mocha --exit",
+    "test:coverage": "c8 --all --src src --check-coverage --lines 95 --branches 90 --functions 95 --statements 95 mocha --exit"
+  },
+  "private": true,
+  "description": "Gatekeepr Express API for email, domain, IP, and user-agent abuse checks.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "apps/api"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

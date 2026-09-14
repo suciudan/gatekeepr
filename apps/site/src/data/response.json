@@ -1,0 +1,16 @@
+{
+  "threats": [
+    "email_local_generic_role",
+    "email_local_double_sep",
+    "email_suspicious_tag",
+    "email_local_repeated_chars",
+    "email_disposable",
+    "ip_blocklist_net_ua",
+    "domain_unregistered"
+  ],
+  "info": {
+    "asn": "NT Broadband ISP",
+    "asn_number": "23969"
+  },
+  "status": "block"
+}

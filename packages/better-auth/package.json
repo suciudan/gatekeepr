@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@gatekeepr/better-auth",
+  "version": "0.0.1",
+  "type": "module",
+  "keywords": [
+    "better-auth",
+    "abuse-prevention",
+    "signup-protection",
+    "fraud-protection"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./api": {
+      "types": "./src/api.d.ts",
+      "default": "./src/api.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "mocha \"test/**/*.test.js\""
+  },
+  "peerDependencies": {
+    "better-auth": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "better-auth": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "mocha": "^12.0.1"
+  },
+  "description": "Better Auth plugin helpers for Gatekeepr signup and login abuse protection.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/better-auth"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

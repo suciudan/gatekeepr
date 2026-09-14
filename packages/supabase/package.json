@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "description": "Supabase Auth Hook helpers for Gatekeepr signup abuse protection.",
+  "name": "@gatekeepr/supabase",
+  "license": "MIT",
+  "keywords": [
+    "supabase",
+    "supabase-auth",
+    "auth-hooks",
+    "edge-functions",
+    "bot-detection",
+    "abuse-prevention",
+    "signup-protection"
+  ],
+  "version": "0.0.3",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "mocha \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "standardwebhooks": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^12.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/supabase"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

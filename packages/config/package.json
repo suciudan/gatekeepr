@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@repo/config",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.js"
+  },
+  "private": true,
+  "description": "Shared Gatekeepr configuration helpers.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/config"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

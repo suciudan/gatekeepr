@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "description": "Passport.js and Express middleware helpers for Gatekeepr signup and login abuse protection.",
+  "name": "@gatekeepr/passport",
+  "version": "0.0.1",
+  "type": "module",
+  "keywords": [
+    "passport",
+    "passportjs",
+    "express",
+    "abuse-prevention",
+    "signup-protection",
+    "fraud-protection"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "mocha \"test/**/*.test.js\""
+  },
+  "peerDependencies": {
+    "express": ">=4",
+    "passport": ">=0.6"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    },
+    "passport": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "mocha": "^12.0.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/passport"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

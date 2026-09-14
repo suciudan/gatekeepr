@@ -1,0 +1,129 @@
+{
+  "root": {
+    "type": "EmailLayout",
+    "data": {
+      "backdropColor": "#030712",
+      "canvasColor": "#030712",
+      "textColor": "#242424",
+      "fontFamily": "MODERN_SANS",
+      "childrenIds": [
+        "block-1709571212684",
+        "block-1761492589770",
+        "block-1709571234315",
+        "block-1761492722571",
+        "block-1709571247550",
+        "block-1709571281151"
+      ]
+    }
+  },
+  "block-1709571212684": {
+    "type": "Image",
+    "data": {
+      "style": {
+        "padding": {
+          "top": 24,
+          "bottom": 24,
+          "right": 24,
+          "left": 24
+        }
+      },
+      "props": {
+        "height": 54,
+        "url": "https://gatekeepr.io/logo.png",
+        "alt": "Gatekeepr",
+        "linkHref": "https://gatekeepr.io",
+        "contentAlignment": "middle"
+      }
+    }
+  },
+  "block-1709571234315": {
+    "type": "Text",
+    "data": {
+      "style": {
+        "color": "#FFFFFF",
+        "fontWeight": "normal",
+        "padding": {
+          "top": 0,
+          "bottom": 16,
+          "right": 24,
+          "left": 24
+        }
+      },
+      "props": {
+        "text": "You can use the code below to verify your email address:"
+      }
+    }
+  },
+  "block-1709571247550": {
+    "type": "Text",
+    "data": {
+      "style": {
+        "color": "#FFFFFF",
+        "fontWeight": "normal",
+        "padding": {
+          "top": 0,
+          "bottom": 16,
+          "right": 24,
+          "left": 24
+        }
+      },
+      "props": {
+        "text": "This code will expire in 5 minutes for security reasons."
+      }
+    }
+  },
+  "block-1709571281151": {
+    "type": "Text",
+    "data": {
+      "style": {
+        "color": "#A3A3A3",
+        "fontWeight": "normal",
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "right": 24,
+          "left": 24
+        }
+      },
+      "props": {
+        "text": "If you didn’t request this, you can safely ignore this email. No action will be taken."
+      }
+    }
+  },
+  "block-1761492589770": {
+    "type": "Heading",
+    "data": {
+      "props": {
+        "text": "Hello,",
+        "level": "h1"
+      },
+      "style": {
+        "color": "#FFFFFF",
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "right": 24,
+          "left": 24
+        }
+      }
+    }
+  },
+  "block-1761492722571": {
+    "type": "Heading",
+    "data": {
+      "props": {
+        "text": "455623"
+      },
+      "style": {
+        "color": "#FFFFFF",
+        "fontFamily": "MONOSPACE",
+        "padding": {
+          "top": 16,
+          "bottom": 16,
+          "right": 24,
+          "left": 24
+        }
+      }
+    }
+  }
+}

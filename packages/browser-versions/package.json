@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@repo/browser-versions",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@repo/core": "*"
+  },
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "private": true,
+  "description": "Gatekeepr browser-version dataset helpers and artifacts.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/browser-versions"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

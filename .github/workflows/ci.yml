@@ -1,0 +1,131 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  TURBO_TELEMETRY_DISABLED: "1"
+  # Contributor checks must never load a developer's local service credentials.
+  DOTENV_CONFIG_PATH: /dev/null
+
+jobs:
+  node:
+    name: API and JavaScript integrations
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: corepack enable
+      - run: yarn install --immutable
+      - name: Audit dependencies
+        run: yarn npm audit --all --recursive --no-deprecations --severity high
+      - run: yarn test:unit
+      - run: yarn workspace site lint
+      - name: Build public site
+        env:
+          PAYLOAD_CMS_URL: http://127.0.0.1:9
+          BETTER_AUTH_SECRET: ci-only-placeholder-secret-do-not-use-in-production
+          BETTER_AUTH_URL: http://localhost:9999
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_PORT: "9"
+          MYSQL_DB: gatekeepr_ci
+          MYSQL_USER: gatekeepr_ci
+          MYSQL_PASS: ci-placeholder
+          REDIS_URL: redis://127.0.0.1:9
+          GATEKEEPR_API_URL: http://127.0.0.1:9
+        run: yarn workspace site build
+      - name: Build documentation
+        run: yarn workspace docs build
+
+  dashboard:
+    name: Dashboard checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PAYLOAD_SECRET: ci-only-placeholder-secret-do-not-use-in-production
+      # Vitest creates and removes temporary SQLite databases for each suite.
+      DATABASE_URL: ""
+      TEST_DATABASE_URL: ""
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn workspace dash check-types
+      - run: yarn workspace dash test:int
+      - name: Build dashboard
+        env:
+          DATABASE_URL: file:${{ runner.temp }}/gatekeepr-build.db
+          PAYLOAD_ENABLE_DB_PUSH: "true"
+          REDIS_URL: redis://127.0.0.1:16379
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_PORT: "13306"
+          MYSQL_DB: gatekeepr_build
+          MYSQL_USER: gatekeepr_build
+          MYSQL_PASS: ci-placeholder
+        run: yarn workspace dash build
+
+  laravel:
+    name: Laravel integration (PHP ${{ matrix.php }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ["8.2", "8.4"]
+    defaults:
+      run:
+        working-directory: packages/laravel
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@b604ade2a87db23f8871b7182e69ec5e75effb45 # v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer:v2
+      - run: composer validate --strict
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - run: composer audit
+      - run: composer test
+
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install verified Gitleaks binary
+        working-directory: ${{ runner.temp }}
+        run: |
+          curl --fail --silent --show-error --location --retry 3 --output gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo '551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gitleaks.tar.gz' | sha256sum --check
+          tar -xzf gitleaks.tar.gz gitleaks
+      - name: Scan Git history
+        run: '"${{ runner.temp }}/gitleaks" git . --config .gitleaks.toml --redact --no-banner --log-opts=--all --max-decode-depth=2 --max-archive-depth=2'

@@ -1,0 +1,17 @@
+input: .
+output: .retype
+
+url: https://docs.gatekeepr.io
+
+favicon: static/branding/favicon.ico
+
+branding:
+  logo: static/branding/logo-light.svg
+  logoDark: static/branding/logo-dark.svg
+  label: Docs
+
+exclude:
+  - "README.md"
+
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."

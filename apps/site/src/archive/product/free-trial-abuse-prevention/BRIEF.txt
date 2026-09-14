@@ -1,0 +1,152 @@
+Write a product landing page for Gatekeepr using the brief below.
+
+COMPANY
+Gatekeepr is a developer-first API for protecting signup flows. It analyzes email, IP, and user agent at signup and returns a final status of allow, challenge, or block. It also returns threats, trust signals, blocklists, and info so teams can understand why the decision happened.
+
+PAGE NAME
+Free-Trial Abuse Prevention
+
+PAGE ROLE
+This is the use-case page for SaaS teams dealing with repeat trials, multi-account abuse, throwaway emails, and fake users draining free plans or free credits. This page replaces any old fraud-scoring page and should map directly to the business pain Gatekeepr already leads with.
+
+VISIBLE NAV LABEL
+Free-Trial Abuse Prevention
+
+SUGGESTED URL
+/product/free-trial-abuse-prevention
+
+PAGE OWNERSHIP
+Own the PLG/free-tier problem. This page should be more commercial and use-case specific than Signup Protection. It should focus on repeat trials, multi-accounting, wasted credits, and polluted metrics.
+
+PRIMARY KEYWORD
+free trial abuse prevention
+
+SECONDARY KEYWORDS
+prevent free trial abuse
+repeat signup abuse
+multi-account abuse
+stop repeat trials
+free tier abuse prevention
+account creation abuse
+stop fake trial signups
+repeat signups
+
+SUPPORTING PHRASES
+disposable emails
+fake accounts
+bots
+anonymous IPs
+VPN and Tor traffic
+trial farming
+growth tax
+wasted credits
+polluted product analytics
+self-serve SaaS abuse
+
+SEARCH INTENT
+Commercial investigation. The reader already feels the pain and wants a focused solution.
+
+AUDIENCE
+SaaS founders
+PLG teams
+developers
+AI tools with expensive free usage
+self-serve SaaS companies with trials or credits
+
+CORE PROMISE
+Stop repeat trial abuse before it drains your free plan, wastes infrastructure, and corrupts your growth data.
+
+CORE MESSAGING ANGLE
+This page should connect abuse directly to economics: free credits consumed by bad users, inflated signup numbers, bad conversion metrics, higher support noise, and lower confidence in product analytics. Make it clear that this is a growth and monetization problem.
+
+PRODUCT TRUTH TO ANCHOR TO
+- Gatekeepr evaluates email, IP, and user agent at signup
+- It returns allow, challenge, or block
+- Teams can inspect threats, trust, blocklists, and info to understand what happened
+- Challenge can be used for extra verification or step-up friction
+- Do not mention fraud score, thresholds, scoring models, or risk scores
+
+SUGGESTED SEO ELEMENTS
+H1: Prevent Free-Trial Abuse at Signup
+Title tag: Free-Trial Abuse Prevention for SaaS | Gatekeepr
+Meta description: Stop repeat signups, disposable emails, and multi-account abuse before they drain your free plan. Gatekeepr returns a clear allow, challenge, or block decision in real time.
+
+HERO DIRECTION
+Possible headline angle: Stop repeat trials before they become a growth tax.
+Subheadline should make the business impact obvious: protect revenue, preserve analytics, and reduce waste without adding friction for everyone.
+Primary CTA: Start Free
+Secondary CTA: View API Docs
+
+MUST-COVER SECTIONS
+1. Hero
+2. Why free-trial abuse hurts SaaS economics
+3. Common abuse patterns
+4. Why CAPTCHA and basic email validation are not enough
+5. How Gatekeepr decides allow / challenge / block
+6. Example enforcement policies
+7. API example
+8. Use cases
+9. FAQs
+10. Final CTA
+
+SECTION NOTES
+- “Why free-trial abuse hurts SaaS economics” should mention wasted free credits, compute costs, support time, skewed activation/conversion metrics, and lower trust in top-of-funnel data.
+- “Common abuse patterns” should mention disposable emails, repeat signups, datacenter/VPN/Tor traffic, suspicious email structure, and multi-account behavior.
+- “How Gatekeepr decides allow / challenge / block” should make the product feel operational, not theoretical.
+- “Example enforcement policies” should be concrete:
+  - allow = continue signup
+  - challenge = verify email / add friction / review
+  - block = reject signup
+- Include a short comparison against manual review and CAPTCHA-only defenses.
+
+USE CASES TO INCLUDE
+- Free trials
+- Free credits
+- Freemium products
+- Waitlists vulnerable to abuse
+- AI products with real infrastructure cost per user
+
+PROOF / EXAMPLES TO WEAVE IN
+- Disposable email signups can be blocked before account creation
+- Suspicious signups can be challenged instead of blocked
+- Real users should still have a smooth signup flow
+- Teams can start in monitor mode before enforcing
+
+FAQ QUESTIONS
+- What data does Gatekeepr need to evaluate a trial signup?
+- What does challenge mean for a suspicious signup?
+- Can I run Gatekeepr in shadow mode before blocking users?
+- How is this different from basic email validation?
+
+INTERNAL LINKS TO MENTION
+Signup Protection
+Email Intelligence
+How It Works
+Pricing
+API Docs
+
+CTA LANGUAGE
+Primary CTA: Start Free
+Secondary CTA: View API Docs
+
+WRITING RULES
+- Tone: direct, commercially sharp, technical when needed
+- Keep the page rooted in SaaS growth and product economics
+- No scoring language anywhere
+- No payments, chargebacks, KYC, or generic enterprise fraud framing
+- Do not position Gatekeepr as a broad anti-fraud platform
+- Use the primary keyword naturally in the H1, intro, at least one H2, and one FAQ
+- The page should feel useful to founders and easy to believe for developers
+
+OUTPUT FORMAT
+Write a polished landing page in clear web-copy format with:
+- headline
+- subheadline
+- CTA copy
+- section headings
+- body copy
+- one code/API section
+- four FAQs
+- final CTA
+
+Aim for roughly 900 to 1,300 words.

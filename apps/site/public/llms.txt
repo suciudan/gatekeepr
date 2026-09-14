@@ -1,0 +1,40 @@
+# Gatekeepr
+
+> Gatekeepr is an abuse-prevention API for signup, login, and free-trial flows. It analyzes email, domain, IP address, and user-agent signals, then returns a clear `allow`, `challenge`, or `block` decision.
+
+Gatekeepr helps SaaS and API products block disposable emails, automated signups, Tor and blocklisted IPs, suspicious hosting providers, invalid domains, fresh or expired domains, disposable MX infrastructure, and suspicious browser/user-agent patterns before abuse reaches the product.
+
+## Main Site
+
+- [Gatekeepr](https://gatekeepr.io/): Product overview for stopping free-trial abuse at signup.
+- [Disposable Email Checker](https://gatekeepr.io/disposable-email-checker): Free tool for checking whether an email address or domain is disposable, temporary, or throwaway.
+- [Get a free API key](https://gatekeepr.io/get-free-api-key): Create an account and start using the API.
+- [Status](https://gatekeepr.io/status): Public service status page.
+
+## Documentation
+
+- [Documentation home](https://docs.gatekeepr.io/): Product and API documentation.
+- [Authorization](https://docs.gatekeepr.io/api/authorization/): How to authorize API requests with an `Authorization` header.
+- [Send a request](https://docs.gatekeepr.io/api/send-request/): Request payload, endpoint, examples, and response shape.
+- [Decision outcomes](https://docs.gatekeepr.io/api/decisions/): Explanation of `allow`, `challenge`, and `block` statuses.
+- [Checks overview](https://docs.gatekeepr.io/checks/): Overview of email, domain, IP, and user-agent checks.
+- [Email checks](https://docs.gatekeepr.io/checks/email/): Email syntax, disposable domain, role address, provider, separator, tag, and composition checks.
+- [Domain checks](https://docs.gatekeepr.io/checks/domain/): Domain syntax, MX verification, disposable MX infrastructure, and domain age checks.
+- [IP checks](https://docs.gatekeepr.io/checks/ip/): Reserved IP, Tor exit node, ASN/provider, and Spamhaus DROP checks.
+- [User-agent checks](https://docs.gatekeepr.io/checks/user-agent/): Automation client and outdated browser checks.
+
+## Product Updates
+
+- [Blog](https://gatekeepr.io/blog): Product updates and release notes.
+- [Research category](https://gatekeepr.io/blog/category/research): Research and technical writing.
+- [How to Detect Disposable Email Addresses Beyond Blocklists](https://gatekeepr.io/blog/detect-disposable-email-addresses-mx-records): How MX records and mail server IPs help detect disposable email infrastructure.
+- [Updates for Week 38, 2025](https://gatekeepr.io/blog/updates-week-38-2025): Logging, performance tracking, AWS and Cloudflare IP ranges, disposable-domain source expansion, and caching improvements.
+- [Updates for Week 39, 2025](https://gatekeepr.io/blog/updates-week-39-2025): RDAP-first domain checks with WHOIS fallback.
+- [Updates for Week 40, 2025](https://gatekeepr.io/blog/updates-week-40-2025): Disposable email list expansion to more than 70,000 domains.
+- [Updates for Week 44, 2025](https://gatekeepr.io/blog/updates-week-44-2025): Domain migration, RDAP/WHOIS fixes, new email checks, status decisions, and integration package updates.
+
+## Legal
+
+- [Privacy Policy](https://gatekeepr.io/privacy): Privacy information.
+- [Data Processing Agreement](https://gatekeepr.io/legal/data-processing-agreement): Data processing terms.
+- [Terms of Service](https://gatekeepr.io/legal/terms-of-service): Product terms.

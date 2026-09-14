@@ -1,0 +1,37 @@
+{
+  "name": "gatekeepr",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "ncu": "ncu -u --packageFile **/package.json",
+    "test": "turbo run test",
+    "test:unit": "yarn workspace api test && yarn workspaces foreach --all --include '@gatekeepr/*' --include @repo/browser-versions run test",
+    "audit": "yarn npm audit --all --recursive --no-deprecations"
+  },
+  "devDependencies": {
+    "mocha": "^12.0.1",
+    "turbo": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "packageManager": "yarn@4.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "description": "Open-source signup abuse prevention engine and integration packages.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme",
+  "resolutions": {
+    "next@npm:15.5.25/postcss": "npm:8.5.28"
+  }
+}

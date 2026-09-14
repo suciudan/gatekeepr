@@ -1,0 +1,1 @@
+curl -H "Authorization: [API_KEY]"  "https://api.gatekeepr.io/ping"

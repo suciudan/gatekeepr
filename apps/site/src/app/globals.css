@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+    --color-cinder-50: oklch(97.35% 0.0054 274.97);
+    --color-cinder-100: oklch(94.19% 0.0121 281.08);
+    --color-cinder-200: oklch(87.51% 0.0238 275.33);
+    --color-cinder-300: oklch(76.44% 0.0453 273.89);
+    --color-cinder-400: oklch(60.9% 0.0422 283.46);
+    --color-cinder-500: oklch(52.41% 0.0899 273.01);
+    --color-cinder-600: oklch(44.66% 0.0846 274.08);
+    --color-cinder-700: oklch(38.61% 0.0736 275.4);
+    --color-cinder-800: oklch(24.57% 0.0325 278.55);
+    --color-cinder-850: oklch(19.57% 0.0222 280.1);
+    --color-cinder-900: oklch(18.62% 0.0204 279.78);
+    --color-cinder-950: oklch(17.66% 0.0187 279.37);
+    --container-8xl: 88rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    @apply transition-all;
+}
+
+.blog-post {
+    @apply flex flex-col text-white/80 text-lg/8;
+}
+
+.blog-html-chunk {
+    display: contents;
+}
+
+.blog-html-chunk:not(:first-child) > p:first-child {
+    @apply mt-4;
+}
+
+.blog-post p:not(:first-child),
+.blog-post h3,
+.blog-post hr {
+    @apply mt-4;
+}
+
+.blog-post ul,
+.blog-post ol {
+    @apply mt-2;
+}
+
+.blog-post blockquote {
+    @apply my-6 ml-6 border-l-2 border-blue-500/60 pl-7 text-gray-300 italic;
+}
+
+.blog-post blockquote:first-child {
+    @apply mt-0 mb-6;
+}
+
+.blog-post blockquote p:not(:first-child) {
+    @apply mt-3;
+}
+
+.blog-post ol {
+    @apply list-decimal ml-4;
+}
+
+.blog-post pre {
+    @apply overflow-x-auto rounded-lg bg-gray-900 px-4 py-3 text-base;
+    line-height: 1.75rem;
+}
+
+.blog-post code {
+    @apply break-words whitespace-pre-wrap;
+}
+
+.blog-post pre code {
+    display: block;
+    overflow-wrap: normal;
+    white-space: pre;
+    word-break: normal;
+}
+
+.blog-code-block {
+    @apply relative mt-4;
+}
+
+.blog-code-copy-button {
+    @apply absolute right-2 top-2 inline-flex cursor-pointer items-center gap-1.5 rounded-md border border-white/10 bg-gray-950/85 px-2.5 py-1.5 text-xs font-medium text-gray-300 shadow-sm backdrop-blur transition-all;
+}
+
+.blog-code-copy-button:hover {
+    @apply border-blue-400/40 bg-blue-500/15 text-blue-100;
+}
+
+.blog-code-block pre {
+    @apply pr-24;
+}
+
+.blog-post strong {
+    @apply text-white;
+}
+
+.blog-post h2 {
+    @apply mt-8 text-3xl font-semibold tracking-tight text-pretty text-white;
+}
+
+.blog-post h3 {
+    @apply text-2xl font-semibold tracking-tight text-pretty text-white;
+}
+
+.blog-post h2[id],
+.blog-post h3[id] {
+    scroll-margin-top: 7rem;
+}
+
+.blog-post ul {
+    @apply list-disc ml-4;
+}
+
+.blog-post a {
+    @apply transition-all underline text-blue-500 font-semibold hover:no-underline;
+}
+
+.blog-post .table-wrapper {
+    @apply mt-5 w-full overflow-x-auto rounded-2xl bg-white/[0.03] p-3 ring-1 ring-white/10;
+}
+
+.blog-post table {
+    @apply w-full min-w-[42rem] border-separate border-spacing-0 text-left;
+    border-collapse: separate !important;
+}
+
+.blog-post table th,
+.blog-post table td {
+    @apply px-4;
+    border: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.blog-post table th {
+    @apply whitespace-nowrap bg-blue-500/10 py-3 text-xs font-semibold uppercase tracking-wide text-blue-100 first:rounded-l-xl last:rounded-r-xl;
+    padding-bottom: .75rem !important;
+    padding-top: .75rem !important;
+}
+
+.blog-post table td {
+    @apply border-b border-white/8 py-4 align-top text-base/7 text-gray-300;
+    border-bottom: 1px solid rgb(255 255 255 / .08) !important;
+    padding-bottom: 1rem !important;
+    padding-top: 1rem !important;
+}
+
+.blog-post table tbody tr:last-child td {
+    @apply border-b-0;
+    border-bottom: 0 !important;
+}
+
+dd ul {
+    @apply list-disc ml-4;
+}

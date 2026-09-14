@@ -1,0 +1,12 @@
+[Unit]
+Description=Gatekeepr Site
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/monorepo
+ExecStart=turbo start --filter site
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

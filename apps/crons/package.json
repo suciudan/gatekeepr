@@ -1,0 +1,41 @@
+{
+  "name": "crons",
+  "packageManager": "yarn@4.9.2",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@repo/browser-versions": "*",
+    "@repo/core": "*",
+    "@repo/db": "*",
+    "p-limit": "^6.2.0"
+  },
+  "scripts": {
+    "backfill:disposable": "node src/backfill-disposable-domains.js",
+    "reset:usage:daily": "node src/reset-rpm.js",
+    "export:disposable": "node src/export-disposable-domains.js",
+    "publish:browser-versions": "node src/publish-browser-versions.js",
+    "publish:browser-versions:dry": "node src/publish-browser-versions.js --dry-run",
+    "publish:disposable": "node src/publish-disposable-domains.js",
+    "publish:disposable:dry": "node src/publish-disposable-domains.js --dry-run",
+    "publish:disposable-infrastructure": "node src/publish-disposable-infrastructure.js",
+    "publish:disposable-infrastructure:dry": "node src/publish-disposable-infrastructure.js --dry-run",
+    "rebuild:disposable-cache": "node src/rebuild-disposable-redis-cache.js",
+    "refresh:browser-versions": "node src/refresh-browser-versions.js",
+    "refresh:disposable": "node src/refresh-disposable-emails.js",
+    "refresh:disposable:mx": "node src/refresh-disposable-mx.js",
+    "refresh:disposable:mx:all": "node src/refresh-disposable-mx-all.js",
+    "refresh:disposable:mx:all:publish": "node src/refresh-disposable-mx-all.js --publish"
+  },
+  "private": true,
+  "description": "Gatekeepr scheduled data refresh and dataset publishing jobs.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "apps/crons"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}

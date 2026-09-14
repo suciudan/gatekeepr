@@ -1,0 +1,5 @@
+export const REQUESTS_FREE_PACKAGE = 1000
+
+export const HOUR_IN_SECONDS = 60 * 60
+
+export const DAY_IN_SECONDS = HOUR_IN_SECONDS * 24

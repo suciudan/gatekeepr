@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@gatekeepr/authjs",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "mocha \"test/**/*.test.js\""
+  },
+  "peerDependencies": {
+    "@auth/core": ">=0.34 || >=1",
+    "next-auth": ">=5.0.0-beta.0"
+  },
+  "peerDependenciesMeta": {
+    "@auth/core": {
+      "optional": true
+    },
+    "next-auth": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "mocha": "^12.0.1"
+  },
+  "description": "Auth.js and NextAuth helpers for Gatekeepr sign-in abuse protection.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/authjs"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme",
+  "keywords": [
+    "authjs",
+    "next-auth",
+    "abuse-prevention",
+    "signup-protection",
+    "fraud-protection"
+  ]
+}

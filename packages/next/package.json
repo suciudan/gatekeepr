@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@gatekeepr/next",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "mocha \"test/**/*.test.js\""
+  },
+  "peerDependencies": {
+    "next": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "mocha": "^12.0.1"
+  },
+  "description": "Next.js helpers for Gatekeepr signup and login abuse protection.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/next"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme",
+  "keywords": [
+    "nextjs",
+    "abuse-prevention",
+    "signup-protection",
+    "fraud-protection",
+    "bot-detection"
+  ]
+}

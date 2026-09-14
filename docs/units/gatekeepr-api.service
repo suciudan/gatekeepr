@@ -1,0 +1,12 @@
+[Unit]
+Description=Gatekeepr API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/monorepo
+ExecStart=turbo start --filter api
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

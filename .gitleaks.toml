@@ -1,0 +1,20 @@
+title = "Gatekeepr secret scanning"
+
+# Keep all built-in secret detectors enabled when loading this repository config.
+[extend]
+useDefault = true
+
+# These exact strings name Redis sets. Restrict the exception to their source
+# files so adding a secret near one of these identifiers cannot bypass scanning.
+[[allowlists]]
+description = "Redis set names and the adjacent imported constant"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = [
+	'''(^|/)apps/api/src/checks/domain/mxCheck\.js$''',
+	'''(^|/)packages/core/src/disposable-domains\.js$'''
+]
+regexTarget = "secret"
+regexes = [
+	'''^(DISPOSABLE_MX_IPV6_KEY|disposable_mx_ipv4|disposable_mx_ipv6)$'''
+]

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@repo/db",
+  "version": "0.0.1",
+  "scripts": {
+    "migrate:latest": "knex migrate:latest --knexfile src/knexfile.mjs",
+    "migrate:status": "knex migrate:status --knexfile src/knexfile.mjs"
+  },
+  "exports": {
+    "./knexfile": "./src/knexfile.mjs",
+    "./*": "./src/*.js"
+  },
+  "dependencies": {
+    "@repo/config": "*",
+    "dotenv": "^17.2.1",
+    "knex": "^3.1.0",
+    "mysql2": "^3.14.2"
+  },
+  "private": true,
+  "description": "Gatekeepr Knex/MySQL connection helpers and migrations.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "packages/db"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.0"
+  },
+  "type": "module"
+}

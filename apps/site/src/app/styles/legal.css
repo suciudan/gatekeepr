@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+.legal {
+    @apply pt-24 lg:pt-36 lg:scroll-mt-10;
+}
+
+.legal h1 {
+    @apply mt-2 mb-8 block text-center text-white leading-12 font-bold tracking-tight sm:tracking-tight text-3xl sm:text-4xl;
+}
+
+.legal section {
+    @apply flex flex-col gap-2;
+}
+
+.legal h2 {
+    @apply font-semibold text-white text-xl lg:text-2xl m-0;
+}
+
+.legal ul {
+    @apply list-disc ml-4;
+}

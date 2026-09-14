@@ -1,0 +1,23 @@
+export const agents = [
+	"curl/",
+	"Wget/",
+	"HTTPie/",
+	"python-requests/",
+	"Python-urllib/",
+	"Go-http-client/",
+	"Java/",
+	"Apache-HttpClient/",
+	"libwww-perl/",
+	"LWP::Simple",
+	"GuzzleHttp/",
+	"PostmanRuntime/",
+	"okhttp/",
+	"axios/",
+	"node-fetch/",
+	"HeadlessChrome",
+	"puppeteer/",
+	"ApacheBench/",
+	"feedparser/",
+	"Apple-PubSub/",
+	"AWS Lambda"
+]

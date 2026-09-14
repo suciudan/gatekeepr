@@ -1,0 +1,25 @@
+{
+  "name": "debugger",
+  "packageManager": "yarn@4.9.2",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@repo/core": "*"
+  },
+  "scripts": {
+    "dev": "node index.js",
+    "domains": "node generate-domains-csv.js"
+  },
+  "private": true,
+  "description": "Local Gatekeepr debugging utilities for domain and data inspection.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suciudan/gatekeepr.git",
+    "directory": "apps/debugger"
+  },
+  "bugs": {
+    "url": "https://github.com/suciudan/gatekeepr/issues"
+  },
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
+}
