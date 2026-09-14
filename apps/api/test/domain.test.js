@@ -339,6 +339,8 @@ describe("domain checks", function () {
 				}]
 			}
 			const mxCheck = createDomainMxCheck({
+				jsonGetFn: async () => null,
+				jsonSetWithExFn: async () => {},
 				getDomainMxSnapshotFn: async () => mxSnapshot,
 				matchDisposableMxFn: async () => ({
 					hosts: ["mx1.example.com"],
@@ -366,6 +368,8 @@ describe("domain checks", function () {
 	it("still blocks and logs when disposable MX persistence fails", async function () {
 		let loggedMessage = null
 		const mxCheck = createDomainMxCheck({
+			jsonGetFn: async () => null,
+			jsonSetWithExFn: async () => {},
 			getDomainMxSnapshotFn: async () => ({
 				mxRecords: [{ exchange: "mx1.example.com", priority: 10 }],
 				mxResolvedAt: "2026-03-11T00:00:00.000Z",
@@ -392,6 +396,8 @@ describe("domain checks", function () {
 
 	it("blocks when MX IPs overlap with disposable infrastructure", async function () {
 		const mxCheck = createDomainMxCheck({
+			jsonGetFn: async () => null,
+			jsonSetWithExFn: async () => {},
 			getDomainMxSnapshotFn: async () => ({
 				mxRecords: [{ exchange: "mx1.example.com", priority: 10 }],
 				mxResolvedAt: "2026-03-11T00:00:00.000Z",
