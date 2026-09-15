@@ -46,7 +46,7 @@
     "@repo/config": "*",
     "@repo/core": "*",
     "@repo/db": "*",
-    "better-sqlite3": "^12.9.0",
+    "better-sqlite3": "^13.0.3",
     "cross-env": "^10.1.0",
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
