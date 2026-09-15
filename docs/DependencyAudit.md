@@ -10,6 +10,8 @@ yarn npm audit --all --recursive --no-deprecations --severity high
 
 The final JavaScript dependency tree reports **no high or critical advisories**. The full audit still reports the moderate advisory below and exits with status 1. CI rejects high and critical advisories; the full audit remains available without suppressions. Registry results can change after this review.
 
+The dependency-update review on 2026-09-15 repeated the audit after updating Next.js, React, PostgreSQL client packages, cross-env, and Tailwind CSS. The remaining advisory is unchanged.
+
 ## Remaining moderate advisory
 
 - Package: `esbuild@0.18.20`.
@@ -18,9 +20,9 @@ The final JavaScript dependency tree reports **no high or critical advisories**.
 - The advisory concerns esbuild's development HTTP server. Inspection of the installed configuration loader found transform calls, with no call to esbuild's `serve` or `context` APIs. The repository does not start this esbuild development server. This limits the observed exposure; it is not a claim that every possible use of these dependencies is safe.
 - Do not expose an esbuild development server using this version. Remove this advisory by updating Payload/Drizzle to a dependency tree that uses a supported loader and patched esbuild. Re-run the full audit, dashboard type check, integration tests, and build after that change. Avoid forcing an incompatible esbuild version into the deprecated loader without testing its configuration-loading behavior.
 
-## Compatibility override
+## Next.js compatibility
 
-The root `resolutions` entry updates the `postcss` dependency pinned by `next@15.5.25` to `8.5.28`, within PostCSS major version 8. The override addresses advisory reports in the older pinned dependency. Keep it until the supported Next.js 15 dependency tree includes an appropriate patched version, and verify site lint/build before removing it.
+Both Next.js applications use `next@16.3.5` with the matching ESLint configuration. The site uses the native flat ESLint configuration supported by Next.js 16. The earlier PostCSS override for `next@15.5.25` has been removed because that dependency is no longer present; site lint/build and the high/critical dependency audit pass without that override.
 
 ## PHP integration
 

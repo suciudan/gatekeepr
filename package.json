@@ -30,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/suciudan/gatekeepr/issues"
   },
-  "homepage": "https://github.com/suciudan/gatekeepr#readme",
-  "resolutions": {
-    "next@npm:15.5.25/postcss": "npm:8.5.28"
-  }
+  "homepage": "https://github.com/suciudan/gatekeepr#readme"
 }

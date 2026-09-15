@@ -14,9 +14,9 @@ function HighlightedResponse({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">  </span>
-					<span className="text-blue-300">"status"</span>
+					<span className="text-blue-300">&quot;status&quot;</span>
 					<span className="text-gray-500">: </span>
-					<span className="text-amber-300">"challenge"</span>
+					<span className="text-amber-300">&quot;challenge&quot;</span>
 					<span className="text-gray-500">,</span>
 				</div>
 			)
@@ -36,7 +36,7 @@ function HighlightedResponse({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-emerald-300">"valid_email_syntax"</span>
+					<span className="text-emerald-300">&quot;valid_email_syntax&quot;</span>
 				</div>
 			)
 		}
@@ -45,7 +45,7 @@ function HighlightedResponse({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-rose-300">"known_disposable_provider"</span>
+					<span className="text-rose-300">&quot;known_disposable_provider&quot;</span>
 				</div>
 			)
 		}
@@ -54,9 +54,9 @@ function HighlightedResponse({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-blue-300">"recommended_action"</span>
+					<span className="text-blue-300">&quot;recommended_action&quot;</span>
 					<span className="text-gray-500">: </span>
-					<span className="text-amber-300">"require_email_verification"</span>
+					<span className="text-amber-300">&quot;require_email_verification&quot;</span>
 				</div>
 			)
 		}

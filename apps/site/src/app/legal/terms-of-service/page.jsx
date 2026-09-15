@@ -78,7 +78,7 @@ export default function TermsOfService() {
 									purchasing a subscription.
 								</li>
 								<li>
-									If you need higher throughput, just <strong>reach out</strong>. We're happy to talk.
+									If you need higher throughput, just <strong>reach out</strong>. We&apos;re happy to talk.
 								</li>
 								<li>
 									We monitor for abuse, and we will block users or systems sending unreasonable

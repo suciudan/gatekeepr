@@ -15,7 +15,7 @@ const navigation = [
 	{ name: "Docs", href: "https://docs.gatekeepr.io" },
 ]
 
-const DisclosureLink = forwardRef((props, ref) => {
+const DisclosureLink = forwardRef(function DisclosureLink(props, ref) {
 	return props.href.includes("http") ?
 		<a ref={ref} {...props} rel="noopener noreferrer" target="_blank" /> :
 		<Link ref={ref} {...props} />

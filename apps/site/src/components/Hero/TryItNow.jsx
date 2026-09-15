@@ -63,9 +63,6 @@ export default function HeroTryItNow() {
 		const timeouts = []
 		let currentIndex = 0
 
-		setTypedEmail("")
-		setPhase("typing")
-
 		const typeTimer = setInterval(() => {
 			currentIndex += 1
 			setTypedEmail(scenario.email.slice(0, currentIndex))
@@ -80,6 +77,8 @@ export default function HeroTryItNow() {
 						setPhase("result")
 
 						timeouts.push(setTimeout(() => {
+							setTypedEmail("")
+							setPhase("typing")
 							setScenarioIndex((current) => (current + 1) % scenarios.length)
 						}, RESULT_HOLD_MS))
 					}, SCAN_DURATION_MS))
