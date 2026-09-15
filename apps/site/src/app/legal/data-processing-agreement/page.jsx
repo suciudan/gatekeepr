@@ -42,7 +42,7 @@ export default function DataProcessingAgreement() {
 							</p>
 							<p>
 								<strong>Client</strong><br />
-								The natural or legal person who uses Gatekeepr's services.<br />
+								The natural or legal person who uses Gatekeepr&apos;s services.<br />
 								Role: Controller
 							</p>
 						</section>
@@ -105,7 +105,7 @@ export default function DataProcessingAgreement() {
 								and user agent information.
 							</p>
 							<p>
-								<strong>Data subjects</strong>: Users of the Client's platform (such as customers,
+								<strong>Data subjects</strong>: Users of the Client&apos;s platform (such as customers,
 								visitors, or leads).
 							</p>
 							<p>

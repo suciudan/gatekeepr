@@ -360,9 +360,9 @@ function HighlightedResponse({ code }) {
 			return (
 					<div key={index}>
 						<span className="text-gray-500">{"  "}</span>
-						<span className="text-blue-500">"status"</span>
+						<span className="text-blue-500">&quot;status&quot;</span>
 						<span className="text-gray-500">: </span>
-						<span className="text-amber-500">"challenge"</span>
+						<span className="text-amber-500">&quot;challenge&quot;</span>
 						<span className="text-gray-500">,</span>
 					</div>
 				)
@@ -385,7 +385,7 @@ function HighlightedResponse({ code }) {
 				return (
 					<div key={index}>
 						<span className="text-gray-500">{"    "}</span>
-						<span className="text-emerald-500">"known_provider_context"</span>
+						<span className="text-emerald-500">&quot;known_provider_context&quot;</span>
 					</div>
 				)
 			}
@@ -418,9 +418,9 @@ function HighlightedResponse({ code }) {
 				return (
 					<div key={index}>
 						<span className="text-gray-500">{"      "}</span>
-						<span className="text-blue-500">"local_part_pattern"</span>
+						<span className="text-blue-500">&quot;local_part_pattern&quot;</span>
 						<span className="text-gray-500">: </span>
-						<span className="text-amber-500">"suspicious"</span>
+						<span className="text-amber-500">&quot;suspicious&quot;</span>
 					</div>
 				)
 			}

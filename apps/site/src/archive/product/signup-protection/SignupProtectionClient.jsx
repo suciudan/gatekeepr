@@ -261,9 +261,9 @@ function HighlightedJSON({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">  </span>
-					<span className="text-[#60a5fa]">"status"</span>
+					<span className="text-[#60a5fa]">&quot;status&quot;</span>
 					<span className="text-gray-500">: </span>
-					<span className="text-[#f59e0b]">"challenge"</span>
+					<span className="text-[#f59e0b]">&quot;challenge&quot;</span>
 					<span className="text-gray-500">,</span>
 				</div>
 			)
@@ -272,7 +272,7 @@ function HighlightedJSON({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-[#ef4444]">"disposable_email"</span>
+					<span className="text-[#ef4444]">&quot;disposable_email&quot;</span>
 					<span className="text-gray-500">,</span>
 				</div>
 			)
@@ -281,7 +281,7 @@ function HighlightedJSON({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-[#ef4444]">"datacenter_ip"</span>
+					<span className="text-[#ef4444]">&quot;datacenter_ip&quot;</span>
 				</div>
 			)
 		}
@@ -289,7 +289,7 @@ function HighlightedJSON({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-[#22c55e]">"valid_email_syntax"</span>
+					<span className="text-[#22c55e]">&quot;valid_email_syntax&quot;</span>
 				</div>
 			)
 		}
@@ -297,9 +297,9 @@ function HighlightedJSON({ code }) {
 			return (
 				<div key={index}>
 					<span className="text-gray-500">    </span>
-					<span className="text-[#60a5fa]">"recommended_action"</span>
+					<span className="text-[#60a5fa]">&quot;recommended_action&quot;</span>
 					<span className="text-gray-500">: </span>
-					<span className="text-[#f59e0b]">"require_email_verification"</span>
+					<span className="text-[#f59e0b]">&quot;require_email_verification&quot;</span>
 				</div>
 			)
 		}

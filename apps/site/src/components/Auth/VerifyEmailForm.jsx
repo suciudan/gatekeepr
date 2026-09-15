@@ -17,6 +17,10 @@ export default function AuthVerifyEmailForm() {
 	const inputsRef = useRef([])
 	const otp = useMemo(() => digits.join(""), [digits])
 	const searchParamsList = useSearchParams()
+
+	useEffect(() => {
+		inputsRef.current[0]?.focus()
+	}, [])
 	
 	if(!searchParamsList.get("email")) return redirect("/get-free-api-key")
 	
@@ -133,14 +137,10 @@ export default function AuthVerifyEmailForm() {
 		
 	}
 	
-	useEffect(() => {
-		inputsRef?.current[0]?.focus()
-	}, [])
-	
 	return (
 		<form method="POST" action="#" onSubmit={onSubmit}>
 			<p className="text-base text-gray-300 mb-6">
-				We've sent a 6-digit code to your <span className="font-semibold">{searchParamsList.get("email")}</span>.
+				We&apos;ve sent a 6-digit code to your <span className="font-semibold">{searchParamsList.get("email")}</span>.
 				Enter it below to verify and generate your API key.
 			</p>
 			<div className="flex my-4 space-x-1.5 sm:space-x-4 md:my-6">
