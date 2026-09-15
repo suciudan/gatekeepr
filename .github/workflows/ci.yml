@@ -35,8 +35,10 @@ jobs:
       - run: corepack enable
       - run: yarn install --immutable
       - name: Audit dependencies
-        run: yarn npm audit --all --recursive --no-deprecations --severity high
+        run: yarn audit
       - run: yarn test:unit
+      - name: Check dependency compatibility
+        run: node --test scripts/test-esbuild-loader.mjs scripts/test-mail.mjs
       - run: yarn workspace site lint
       - name: Build public site
         env:
