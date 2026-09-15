@@ -4404,7 +4404,7 @@ __metadata:
     p-limit: "npm:^6.2.0"
     rate-limit-redis: "npm:^4.2.1"
     supertest: "npm:^7.1.4"
-    validator: "npm:^13.15.15"
+    validator: "npm:^13.15.35"
     whoiser: "npm:2.0.0-beta.9"
   languageName: unknown
   linkType: soft
@@ -12308,7 +12308,7 @@ __metadata:
     remark-html: "npm:^16.0.1"
     tailwindcss: "npm:^4.3.3"
     typescript: "npm:^5.9.2"
-    validator: "npm:13.15.22"
+    validator: "npm:13.15.35"
   languageName: unknown
   linkType: soft
 
@@ -13667,14 +13667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validator@npm:13.15.22":
-  version: 13.15.22
-  resolution: "validator@npm:13.15.22"
-  checksum: 10c0/69c0ad0abff0bc9f96faeb6790f5dd4e11b685031e4a115a056f3ed729aaac4d218e61f3582c051cb593305614a0a0d3b5da6ca7d5e0b426fa21be256a0ad852
-  languageName: node
-  linkType: hard
-
-"validator@npm:^13.15.15":
+"validator@npm:13.15.35, validator@npm:^13.15.35":
   version: 13.15.35
   resolution: "validator@npm:13.15.35"
   checksum: 10c0/1958ebcad578128d154853a2b9bf5b95e7738dcc7d1d065e50a969812272312ec379dcaf375b9d7545e04a71de6755f60f5a4b49c1405737a9c80e11da297eef
