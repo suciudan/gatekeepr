@@ -1,28 +1,36 @@
 # Dependency audit
 
-The public-source preparation audit on 2026-09-14 used Yarn 4.9.2 and Node.js 24.21.0:
+The dependency review on 2026-09-15 used Yarn 4.9.2 and Node.js 24.21.0:
 
 ```bash
 yarn install --immutable
 yarn audit
-yarn npm audit --all --recursive --no-deprecations --severity high
+node --test scripts/test-esbuild-loader.mjs scripts/test-mail.mjs
 ```
 
-The final JavaScript dependency tree reports **no high or critical advisories**. The full audit still reports the moderate advisory below and exits with status 1. CI rejects high and critical advisories; the full audit remains available without suppressions. Registry results can change after this review.
+The full JavaScript dependency audit reports **no advisories**. CI runs the full audit without severity exclusions or advisory suppressions. Registry results can change after this review.
 
-The dependency-update review on 2026-09-15 repeated the audit after updating Next.js, React, PostgreSQL client packages, cross-env, and Tailwind CSS. The remaining advisory is unchanged.
+## esbuild configuration-loader override
 
-## Remaining moderate advisory
+The original audit found [GHSA-67mh-4wv8-2f99: development server cross-origin information exposure](https://github.com/advisories/GHSA-67mh-4wv8-2f99) in `esbuild@0.18.20`, pulled in through Payload's Drizzle configuration loader:
 
-- Package: `esbuild@0.18.20`.
-- Advisory: [GHSA-67mh-4wv8-2f99: development server cross-origin information exposure](https://github.com/advisories/GHSA-67mh-4wv8-2f99).
-- Dependency path: `apps/dash` → `@payloadcms/db-postgres` / `@payloadcms/db-sqlite@3.89.0` → `drizzle-kit@0.31.7` → `@esbuild-kit/esm-loader@2.6.5` → `@esbuild-kit/core-utils@3.3.2` → `esbuild@0.18.20`.
-- The advisory concerns esbuild's development HTTP server. Inspection of the installed configuration loader found transform calls, with no call to esbuild's `serve` or `context` APIs. The repository does not start this esbuild development server. This limits the observed exposure; it is not a claim that every possible use of these dependencies is safe.
-- Do not expose an esbuild development server using this version. Remove this advisory by updating Payload/Drizzle to a dependency tree that uses a supported loader and patched esbuild. Re-run the full audit, dashboard type check, integration tests, and build after that change. Avoid forcing an incompatible esbuild version into the deprecated loader without testing its configuration-loading behavior.
+`apps/dash` → `@payloadcms/db-postgres` / `@payloadcms/db-sqlite@3.89.0` → `drizzle-kit@0.31.7` → `@esbuild-kit/esm-loader@2.6.5` → `@esbuild-kit/core-utils@3.3.2` → `esbuild`.
+
+Payload's current release still pins this Drizzle version, and the latest Drizzle Kit release also retains the legacy loader. The root `resolutions` entry therefore targets only `@esbuild-kit/core-utils/esbuild`, replacing the vulnerable version with patched `0.25.12`. Other esbuild consumers retain their own supported dependency ranges.
+
+This override crosses the loader's declared esbuild range. CI tests the actual resolved dependency chain, synchronous CommonJS and asynchronous ESM TypeScript transforms, and loading a TypeScript configuration with a relative import through the legacy ESM loader. Dashboard integration tests and the production build also validate Payload/Drizzle behavior with the override.
+
+Remove the resolution and its loader-specific regression tests when Payload/Drizzle drops the legacy loader or natively resolves patched esbuild. Repeat the full audit, dashboard type check, integration tests, and build when changing it.
+
+## Test toolchain and mail compatibility
+
+The dashboard uses Vite 8.3, Vitest 5, and `@vitejs/plugin-react` 6.1.1 together. The React plugin requires Vite 8; upgrading it alone on Vite 7 prevents the test configuration from loading. Dependabot groups these tools and Testing Library for future updates.
+
+Nodemailer 10 supports the repository's Node.js 24 baseline. A regression test compiles the real OTP template through its SES transport with the AWS SDK send method stubbed, without sending email or using credentials. This does not validate delivery through a live SES account.
 
 ## Next.js compatibility
 
-Both Next.js applications use `next@16.3.5` with the matching ESLint configuration. The site uses the native flat ESLint configuration supported by Next.js 16. The earlier PostCSS override for `next@15.5.25` has been removed because that dependency is no longer present; site lint/build and the high/critical dependency audit pass without that override.
+Both Next.js applications use `next@16.3.5` with the matching ESLint configuration. The site uses Next.js 16's native flat ESLint configuration. The obsolete Next.js 15 PostCSS override is no longer needed.
 
 ## PHP integration
 

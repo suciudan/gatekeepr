@@ -6,6 +6,14 @@ updates:
       interval: weekly
     open-pull-requests-limit: 5
     groups:
+      dashboard-test-toolchain:
+        patterns:
+          - vite
+          - vitest
+          - "@vitest/*"
+          - "@vitejs/plugin-react"
+          - vite-tsconfig-paths
+          - "@testing-library/*"
       react:
         patterns:
           - react
